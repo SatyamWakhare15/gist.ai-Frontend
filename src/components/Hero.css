@@ -1,0 +1,111 @@
+.hero {
+  width: 100%;
+  padding: 120px 20px;
+  color: white;
+}
+
+.hero-content {
+  text-align: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.hero-title {
+  font-size: 58px;
+  font-weight: 700;
+  margin-bottom: 50px;
+  line-height: 1.2;
+}
+
+/* ---------------------- */
+/*  Cards Row             */
+/* ---------------------- */
+
+.cards-section {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 280px;
+  padding: 25px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+}
+
+.card-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.card-desc {
+  font-size: 14px;
+  opacity: 0.9;
+  margin-bottom: 15px;
+}
+
+.card-btn {
+  background: rgba(255, 255, 255, 0.4);
+  border: none;
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 35px;
+}
+
+/* ---------------------- */
+/*   Subtitle             */
+/* ---------------------- */
+.hero-subtitle {
+  font-size: 17px;
+  margin-bottom: 20px;
+}
+
+/* ---------------------- */
+/*  Search bar            */
+/* ---------------------- */
+
+.search-bar {
+  background: white;
+  width: 500px;
+  padding: 5px 10px;
+  border-radius: 30px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.search-logo {
+  width: 28px;
+  margin-right: 10px;
+}
+
+.search-bar input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 12px;
+  font-size: 15px;
+}
+
+.search-arrow {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #ececff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+
+.search-arrow img {
+  width: 20px;
+}
