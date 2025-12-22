@@ -1,0 +1,49 @@
+.brands-slider-section {
+  width: 100%;
+  background: #2c1d36;      /* purple bg like gist.ai */
+  padding: 40px 0;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Each row */
+.slider {
+  display: flex;
+  gap: 60px;
+  width: max-content;
+  align-items: center;
+  padding: 18px 0;
+}
+
+.slider img {
+  height: 65px;
+  object-fit: contain;
+  opacity: 0.55;
+  filter: brightness(0.9);
+  transition: all 0.3s ease;
+}
+
+.slider img:hover {
+  opacity: 1;
+  filter: brightness(1.2);
+}
+
+/* Slow speed → increase seconds */
+.slider-left {
+  animation: moveLeft 150s linear infinite;   /* slow */
+}
+
+.slider-right {
+  animation: moveRight 150s linear infinite;  /* slow */
+}
+
+/* Keyframes */
+@keyframes moveLeft {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-55%); }
+}
+
+@keyframes moveRight {
+  0% { transform: translateX(-55%); }
+  100% { transform: translateX(0); }
+}
