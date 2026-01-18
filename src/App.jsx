@@ -5,7 +5,7 @@ import ProductSuiteSection from "./components/ProductSuiteSection";
 import PngSlider from "./components/png";
 import PartnersSection from "./components/PartnersSection";
 import TryGistSection from "./components/TryGistSection";
-import Footer from "./components/footer";
+import Footer from "./components/Footer";
 function App() {
   return (
     <>
@@ -13,9 +13,9 @@ function App() {
       <GistAnswers />
       <ProductSuiteSection />
       <PngSlider />
-      <PartnersSection/>
-      <TryGistSection/>
-      <Footer/>
+      <PartnersSection />
+      <TryGistSection />
+      <Footer />
     </>
   );
 }
