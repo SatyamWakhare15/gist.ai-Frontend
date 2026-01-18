@@ -1,16 +1,45 @@
-# React + Vite
+# Gist.ai - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the frontend of the Gist.ai website. It is built using **React** and **Vite**, and it gets its content from a **Strapi CMS** backend.
 
-Currently, two official plugins are available:
+## 🚀 How to Run the Project
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Follow these simple steps to get the project running on your computer:
 
-## React Compiler
+### 1. Install Dependencies
+Open your terminal in the project folder and run:
+```bash
+npm install
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 2. Start the Development Server
+Run this command to see the website on your browser:
+```bash
+npm run dev
+```
+The website will usually be available at: `http://localhost:5173`
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Technologies Used
+
+- **React** - For building the user interface.
+- **Vite** - For a fast development environment.
+- **Axios / Fetch** - To get data from the backend.
+- **CSS** - For styling the components.
+
+---
+
+## 📝 Important Note
+This frontend needs the **Strapi Backend** to be running to show images and text.  
+Make sure your backend is running at: `http://localhost:1337`
+
+---
+
+## 📂 Project Structure
+- `src/components/` - Contains all the website sections like Hero, Footer, etc.
+- `public/` - Contains static images and icons.
+- `src/App.jsx` - The main file that puts all components together.
+
+---
+*Created by the Project Owner*
