@@ -9,8 +9,9 @@ export default function GistAnswersSection() {
 
   // Fetch data when component loads
   useEffect(() => {
+    const backendUrl = import.meta.env.VITE_BACKEND_URL || "http://localhost:1337";
     // Get Gist Answers content from our backend
-    fetch("http://localhost:1337/api/gist-answers?populate=*")
+    fetch(`${backendUrl}/api/gist-answers?populate=*`)
       .then((res) => res.json()) // Convert to JSON
       .then((json) => setData(json.data[0])) // Save first item
       .catch((err) => console.error(err)); // Show error if any
@@ -19,9 +20,11 @@ export default function GistAnswersSection() {
   // Don't show anything if data is not loaded yet
   if (!data) return null;
 
+  const backendUrl = import.meta.env.VITE_BACKEND_URL || "http://localhost:1337";
+
   // Build full URLs for video and badge icon
-  const videoUrl = `http://localhost:1337${data.videoFile?.url}`;
-  const badgeIcon = `http://localhost:1337${data.badgeIcon?.url}`;
+  const videoUrl = `${backendUrl}${data.videoFile?.url}`;
+  const badgeIcon = `${backendUrl}${data.badgeIcon?.url}`;
 
   return (
     <section className="gist-answers-container">
@@ -31,7 +34,7 @@ export default function GistAnswersSection() {
         {/* First line - Logo and "Gist" text */}
         <div className="top-line">
           <img
-            src={`http://localhost:1337${data.logo?.url}`}
+            src={`${backendUrl}${data.logo?.url}`}
             alt="Gist Logo"
             className="gist-logo"
           />

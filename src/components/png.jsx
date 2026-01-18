@@ -9,8 +9,9 @@ const PngSlider = () => {
 
   // Fetch logos when the component loads
   useEffect(() => {
+    const backendUrl = import.meta.env.VITE_BACKEND_URL || "http://localhost:1337";
     // Get brand logos from our server
-    axios.get("http://localhost:1337/api/brand-logos?populate=*")
+    axios.get(`${backendUrl}/api/brand-logos?populate=*`)
       .then((res) => {
         setLogos(res.data.data); // Save logos to state
       })
@@ -22,7 +23,7 @@ const PngSlider = () => {
   // Don't show anything if there are no logos
   if (!logos.length) return null;
 
-  const baseUrl = "http://localhost:1337"; // Server address
+  const backendUrl = import.meta.env.VITE_BACKEND_URL || "http://localhost:1337"; // Server address
 
   return (
     <div className="brands-slider-section">
@@ -37,7 +38,7 @@ const PngSlider = () => {
           {logos.map((logo, index) => (
             <img
               key={index}
-              src={`${baseUrl}${logo.logo.url}`} // Full URL for the image
+              src={`${backendUrl}${logo.logo.url}`} // Full URL for the image
               alt={logo.altText || `logo-${index}`}
             />
           ))}
