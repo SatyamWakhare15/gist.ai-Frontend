@@ -1,0 +1,130 @@
+/* Full Footer Background */
+.gist-footer {
+  background: #2c1d36;      /* purple bg like gist.ai */
+  padding: 120px 0;
+  color: white;
+  font-family: "Inter", sans-serif;
+}
+
+/* Footer Grid Layout */
+.footer-container {
+  width: 85%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+  gap: 60px;
+  align-items: flex-start;
+}
+
+/* LEFT SECTION */
+.footer-left { }
+.footer-logo {
+  width: 140px;
+  margin-bottom: 30px;
+}
+.footer-subtext {
+  font-size: 15px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  color: #e3dafc;
+}
+.footer-subtext a {
+  color: white;
+  text-decoration: underline;
+}
+.footer-link {
+  display: block;
+  margin-bottom: 15px;
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+.footer-link:hover { opacity: 0.7; }
+
+/* SOCIAL ICONS */
+.social-icons {
+  display: flex;
+  gap: 18px;
+  margin-top: 25px;
+}
+.social-icons img {
+  width: 28px;
+  height: 28px;
+  opacity: 0.9;
+  transition: all 0.2s ease;
+}
+.social-icons img:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* MIDDLE SECTION */
+.footer-middle h4 {
+  margin-bottom: 25px;
+  color: #e3dafc;
+  font-size: 17px;
+}
+.footer-middle a {
+  display: block;
+  margin-bottom: 16px;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: opacity 0.2s;
+}
+.footer-middle a:hover { opacity: 0.7; }
+
+/* NEW DOWNLOAD SECTION */
+.footer-download {
+  text-align: left;
+}
+.footer-download h4 {
+  margin-bottom: 20px;
+  color: #e3dafc;
+  font-size: 17px;
+}
+.download-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+.download-link:hover { opacity: 0.7; }
+.download-icon {
+  width: 170px;
+  height: 50px;
+}
+
+/* RIGHT SECTION */
+.footer-right p {
+  margin-bottom: 25px;
+  color: #e3dafc;
+  line-height: 1.5;
+  font-size: 16px;
+}
+.footer-right a {
+  display: block;
+  margin-bottom: 16px;
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+.footer-right a:hover { opacity: 0.7; }
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: 1fr; /* stack vertically */
+  }
+  .footer-left,
+  .footer-middle,
+  .footer-download,
+  .footer-right {
+    margin-bottom: 40px;
+  }
+}

@@ -3,8 +3,8 @@
   display: flex;
   justify-content: space-between;
   align-items: left;
-  padding: 90px 40px;
-  gap: 50px;
+  padding: 200px 40px;
+  gap: 2400px;
   color: #0d0d0c;
   
 }
@@ -24,6 +24,7 @@
   font-weight: 500;
   color: #efc50b;
   width: 250px;
+  
 }
 
 .badge-icon {
