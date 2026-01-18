@@ -8,8 +8,9 @@ const TryGistSection = () => {
 
   // Fetch data when the component loads
   useEffect(() => {
+    const backendUrl = import.meta.env.VITE_BACKEND_URL || "http://localhost:1337";
     // Get content from our server
-    fetch("http://localhost:1337/api/try-gist-sections?populate=*")
+    fetch(`${backendUrl}/api/try-gist-sections?populate=*`)
       .then((res) => res.json()) // Change response to JSON
       .then((json) => setSection(json.data[0])); // Save data to state
   }, []); // Run only once
@@ -30,12 +31,14 @@ const TryGistSection = () => {
   // Extract simple text from the description data
   const descriptionText = description?.[0]?.children?.[0]?.text || "";
 
+  const backendUrl = import.meta.env.VITE_BACKEND_URL || "http://localhost:1337";
+
   return (
     <section
       className="trygist-section"
       // Set the background image from the server
       style={{
-        backgroundImage: `url(http://localhost:1337${backgroundImage.url})`,
+        backgroundImage: `url(${backendUrl}${backgroundImage.url})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
@@ -53,7 +56,7 @@ const TryGistSection = () => {
       {/* Right side: Showing the main image */}
       <div className="trygist-right">
         <img
-          src={`http://localhost:1337${askImage.url}`}
+          src={`${backendUrl}${askImage.url}`}
           alt="Ask anything"
           className="ask-img"
         />

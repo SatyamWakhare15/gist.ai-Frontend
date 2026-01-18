@@ -9,8 +9,9 @@ const PartnersSection = () => {
 
   // Fetch data when component loads
   useEffect(() => {
+    const backendUrl = import.meta.env.VITE_BACKEND_URL || "http://localhost:1337";
     // Get partners data from our backend (includes cards with icons)
-    fetch("http://localhost:1337/api/partners-sections?populate=cards.icon")
+    fetch(`${backendUrl}/api/partners-sections?populate=cards.icon`)
       .then((res) => res.json()) // Convert to JSON
       .then((json) => {
         setSection(json.data[0]); // Save the first section
@@ -36,7 +37,7 @@ const PartnersSection = () => {
             {/* Show icon if it exists */}
             {card.icon?.url && (
               <img
-                src={`http://localhost:1337${card.icon.url}`}
+                src={`${import.meta.env.VITE_BACKEND_URL || "http://localhost:1337"}${card.icon.url}`}
                 alt={card.altText || "icon"}
               />
             )}

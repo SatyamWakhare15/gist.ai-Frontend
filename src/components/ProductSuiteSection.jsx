@@ -11,8 +11,9 @@ export default function ProductSuiteSection() {
 
   // Fetch data when the component loads
   useEffect(() => {
+    const backendUrl = import.meta.env.VITE_BACKEND_URL || "http://localhost:1337";
     // Get product suite content from our backend
-    axios.get("http://localhost:1337/api/product-suite-sections")
+    axios.get(`${backendUrl}/api/product-suite-sections`)
       .then((res) => {
         setData(res.data.data[0]); // Save first item to state
       })

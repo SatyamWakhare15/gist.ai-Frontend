@@ -16,9 +16,10 @@ export default function Hero() {
 
   // This runs once when the page loads
   useEffect(() => {
+    const backendUrl = import.meta.env.VITE_BACKEND_URL || "http://localhost:1337";
     // Fetch homepage content from our backend (Strapi)
     axios
-      .get("http://localhost:1337/api/homepages?populate=*")
+      .get(`${backendUrl}/api/homepages?populate=*`)
       .then((res) => {
         const items = res.data.data;
         // If we got data, save the first item
